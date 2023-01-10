@@ -1,0 +1,628 @@
+/****** INFO ******/
+/* 
+
+Q: Why all the "html" selectors?
+A: This file was created as a POC to demonstrate style-only brand changes. It is loaded as a user stylesheet. The "html" selector adds enough specificity to overwrite the exact rule already in place on the core site, without forcing a complete override via "!important" (which would break otherwise higher-specificity styles in the cascade.)
+
+	These selectors should NOT be included in the final edits of the existing CSS rules. 
+*/
+
+
+
+/* UPDATE: inline pb style tag */
+html .admin-message{
+    background-color: #333;
+}
+
+@media (min-width: 992px)
+{
+	html .admin-message{
+		padding:1rem 0;
+	}
+}
+
+/* UPDATE buttons.scss */
+html .billingBtn a.payPallBtn, html .billingBtn button.payPallBtn, .billingBtn input.payPallBtn, html .customBtn, html a.btn, html button.btn, html input.btn{
+	background:#123d80;
+}
+html .billingBtn a.payPallBtn:active, html .billingBtn a.payPallBtn:focus, html .billingBtn a.payPallBtn:hover, html .billingBtn button.payPallBtn:active, html .billingBtn button.payPallBtn:focus, html .billingBtn button.payPallBtn:hover, html .billingBtn input.payPallBtn:active, html .billingBtn input.payPallBtn:focus, html .billingBtn input.payPallBtn:hover, html .customBtn:active, html .customBtn:focus, html .customBtn:hover, html a.btn:active, html a.btn:focus, html a.btn:hover, html button.btn:active, html button.btn:focus, html button.btn:hover, html input.btn:active, html input.btn:focus, html input.btn:hover{
+	background:#123d80;
+}
+/* TK: this is broken on prod - see institution admin details form submit button */ 
+html .customBtn--inverse, a.btn--inverse, button.btn--inverse, input.btn--inverse{
+	color:#123d80;
+}
+
+/* TK: fix the hover styles */
+html .linkBtn, html  .linkBtn:active, .linkBtn:focus, .linkBtn:hover{
+	color:#123d80;
+}
+
+/* UPDATE inputs.scss */
+html .checkbox--primary input:checked~span:before, html .radio--primary input:checked~span:before, html .radio--secondary input:checked~span:before{
+	background:#123d80;
+	box-shadow:0 0 0 0.125rem #123d80;
+}
+
+/* UPDATE: normalize.scss */
+html  a{
+	color:#123d80;	
+}
+html body{
+	color:#313131;	
+}
+
+/* UPDATE: healthcare-disclaimer.scss */
+html .pageHeader{
+	box-shadow:none;
+	background-color:#EAEAEA;
+}
+
+/* UPDATE: header.scss */
+@media (min-width: 992px) html .pageHeader .contents{
+	padding:1rem 0;
+}
+
+/* UPDATE: mixins.scss */
+html .loginBar .profile-text, html .loginBar .sign-in-label{
+	color:#000;
+}
+html .journal-info-container .info-block{
+	color:#313131;
+	font-size: 14px;
+}
+html .doi-access-wrapper{
+	font-weight:700;
+}
+html .coolBar i{
+	color:#313131;
+}
+html .coolBar [class*=__ctrl]{
+	color:#313131;
+}
+html .coolBar [class*=__block], html .coolBar__drop{
+	color: #123d80;
+}
+html .featured-container .new-issue h3{
+	font-weight:700;
+}
+html select{
+	background-color:#fff;
+	font-size: 14px;
+}
+html .search__sort__drop li:hover{
+	background:#eaeaea;
+}
+html.popup.login-popup .show-request-reset-password, html .popup.login-popup .show-request-username{
+	background:#123d80;
+}
+html .issue-item__title h1, html .issue-item__title h2, html .issue-item__title h3, html .issue-item__title h4, html .issue-item__title h5, html .issue-item__title h6 {
+	font-weight:700;
+}
+html .read-less i[class*=icon-], html .read-more i[class*=icon-]{
+	color:#123d80;
+}
+html .toc__section .icon-toc{
+	color:#123d80;
+}
+html label{
+	color:#313131;
+}
+
+html .note{
+	color:#313131;
+}
+html .terms-message{
+	margin-bottom:1rem;
+}
+html .advanced-search [class*=-ctrl-field] i{
+	
+}
+html .advanced-search__top-section .tab__nav li.active a:after, html .advanced-search__top-section .tab__nav li.js--active a:after{
+	border-top:#123d80;
+}
+html .advanced-search [class*=-ctrl-field] i{
+	color:#123d80;
+}
+html a.search__follow__icon i{
+	color:#123d80;
+}
+
+html .listOfPublications a{
+	color:#123d80;
+}
+
+html .profile-menu a{
+	color:#123d80;
+}
+
+
+
+/* UPDATE: journal-meta.scss */
+html .journal-info-container .info-label, html .journal-info-container .info_label{
+	color:#313131;
+	font-weight:700;
+}
+
+/* UPDATE: menu.scss */
+html .main-nav{
+	background-color: #123d80;
+}
+html .dropdown.hover, html .dropdown.js--open, html .dropdown:focus, html .dropdown:hover{
+	background-color: rgba(255,255,255,0.1);
+}
+html .dropdown__menu{
+	border:2px solid #123d80;
+}
+html .dropdown__menu li:hover{
+	background-color:#123d80;
+	border-color:#123d80;
+}
+
+
+/* UPDATE: lists.scss */
+html .unordered-list-icons li a:hover{
+	color:#123d80;
+}
+
+/* UPDATE: headings.scss */
+html [class*=section__mainHeader]{
+	color:#313131;
+	font-family:'Open Sans', Arial, sans-serif;
+	font-weight:700;
+}
+html .account-page__header{
+	color:#313131;
+}
+
+/* UPDATE: tabs.scss */
+html .tabs--defult-style .tab__nav li.active{
+	background: #123d80;
+}
+html .tab__nav .active a i{
+	color: #123d80;
+}
+
+/* UPDATE: publication-content.scss */
+html .tab__content a, html .content-item-format-links a{
+	color: #123d80;
+}
+html .content-item-format-links a{
+	font-weight: 700;
+}
+html .tabs__header, html h1, html h2, html h3, html h4, html h5, html h6{
+	font-weight:700;
+}
+
+html .extra-info-wrapper .page-range{
+	color:#313131;
+}
+html .keywords li a{
+	color:#123d80;
+}
+html .keywords li a:hover{
+	background:#123d80;
+}
+
+
+/* UPDATE: access.scss */
+html .doi-access-wrapper{
+	font-size:0.8rem;
+}
+html .doi-access-wrapper .free-to-read-access, html .doi-access-wrapper .full-access, html .doi-access-wrapper .Token-access{
+	color: #198C53;
+}
+html .doi-access-wrapper .open-access{
+	color:#B92D80;
+}
+html .doi-access-wrapper .free-access{
+	color:#123d80;
+}
+
+/* UPDATE: slideshow.scss */
+html .owl-carousel .owl-dots button.owl-dot.active span, html .owl-carousel .owl-dots button.owl-dot span:focus, html .owl-carousel .owl-dots button.owl-dot span:hover{
+	background-color: #123d80;
+}
+html .owl-carousel .owl-item a{
+	font-weight:700;
+}
+
+
+/* UPDATE issue-item.scss */
+html .issue-item__title{
+	color: #123d80;
+}
+html .issue-item__details label{
+	color: #313131;
+}
+html .issue-item .loa a{
+	color: #313131;
+}
+
+/* UPDATE cover-image.scss */
+html .cover-image__details label{
+	color: #313131;
+}
+html .issue-item h3.issue-item__title{
+	font-weight: 700;
+}
+html .cover-image--parentInfo .mostRecent .cover-image__parent-item{
+	color:#123d80;
+	
+}
+
+
+/* UPDATE quick-search.scss */
+
+@media (min-width:1200px) {
+	html .expanded--quickSearch .quick-search .quick-search__button, html .quick-search.open .quick-search__button{
+		background-color: #123d80;
+	}
+	html .quick-search .search-options-wrapper a{
+		color: #123d80;
+		border-left: 1px solid #123d80;
+	}
+	html .quick-search .search-options-wrapper{
+		border: 1px solid #123d80;
+	}
+	html .quick-search .dropBlock, html .quick-search select{
+		background-color: #123d80;
+	}
+	
+}
+
+html .quick-search.open .actualQSInput{
+	border-color: #123d80;
+}
+html .article-row-right .tab__nav i{
+	color:#123d80;
+}
+html .quickSearchAutocomplete.ui-autocomplete .single_highlight_class{
+	color:#123d80;
+}
+html .ms-res-ctn .ms-res-item em{
+	color:#123d80;
+}
+
+
+/* UPDATE citation.scss */
+html .citation a{
+	color:#123d80;
+}
+html .epub-state{
+	color:#313131;
+}
+html article{
+	color:#313131;
+}
+
+/* UPDATE publication-content.scss */
+html a.bibLink:hover, html a.tab-link:hover{
+	background:#123d80;
+	color:#fff !important;
+}
+html .article-row-right .tab__nav .active a, html .article-row-right .tab__nav .js--active a{
+	color:#123d80;
+	border-bottom: 4px solid #123d80;
+}
+html .article-section__full a:not(.getFTR__link--color){
+	color:#123d80 !important;	
+}
+html .article-section__full a:not(.getFTR__link--color):hover{
+	background:#123d80;
+	color:#fff !important;
+}
+html .article-section .article-accordion>h2 .accordion__control, html .article-section .article-accordion h3 .accordion__control, html .article-section .article-accordion h4 .accordion__control, html .article-section .article-accordion h5 .accordion__control, html .article-section .article-accordion h6 .accordion__control{
+	background:#123d80;
+}
+html .article-row-right__panes .lot .creative-work .loa a:hover{
+	background:#123d80;
+}
+html .article-row-right .tab__nav a{
+	color: #333;
+}
+
+/* UPDATE PB Assets: dr-overrides.css */
+html article .article__body h2, html article .article__content h2.article-section__title{
+	color: #115C36;
+	font-weight:700;
+}
+html .article-row-right__panes .lot .creative-work .loa a{
+	color: #313131;
+}
+
+/* UPDATE footer.scss  - NB some of these styles are also inline in page builder for some reason*/
+html .main-footer{
+	background:#000;
+	color:rgba(255,255,255,0.8);
+}
+html .copyright-container{
+	color:rgba(255,255,255,0.8);
+}
+
+html .footer-links a, html .footer-links button{
+	font-weight: 500;
+	font-size: 14px;
+	color:rgba(255,255,255,0.8);
+}
+html .footer-links h3{
+	font-weight:700;
+	text-transform:uppercase;
+	font-size: 14px;
+}
+
+
+/* UPDATE journal.scss */
+html .journal-body .section__mainHeader--mid{
+	margin:1rem 0;
+}
+
+
+/* UPDATE page-menu.scss */
+html .pages-nav .nav-icon-links .icon-alert, html .pages-nav .nav-icon-links .icon-icon-Rss, html .pages-nav .nav-icon-links .icon-Rss, html .pages-nav .social-links .icon-alert, html .pages-nav .social-links .icon-icon-Rss, html .pages-nav .social-links .icon-Rss{
+	color:#123d80;
+}
+html .pages-nav .share-access__ctrl, html .pages-nav .share__ctrl{
+	
+}
+
+
+
+/* UPDATE home.scss */
+html .search-header-section .intro-text--search{
+	font-family:'Open Sans', Arial, sans-serif;
+	font-weight:800;
+}
+
+
+html .subjects-container .accordion-tabbed__control{
+	background:#198C53;
+}
+html .subjects-container .accordion-tabbed__tab.js--open .accordion-tabbed__control{
+	background:#313131;
+}
+html .subjects-container .accordion-tabbed__content{
+	font-weight:normal;
+}
+html .subjects-container .accordion-tabbed__content a{
+	color:#313131;
+}
+html .subjects-container .accordion-tabbed__content a:hover{
+	color:#123d80;
+	text-decoration:underline;
+}
+html .resources-container{
+	color:#313131;
+	font-size:16px;
+}
+html .resources-container a{
+	color:#313131;
+}
+html .resources-container a:hover{
+	color:#123d80;
+	text-decoration:underline;
+}
+html .resources-container h3 a{
+	color:#123d80;
+}
+html .featured-container{
+	background: #123d80;
+}
+html .featured-container .section__mainHeader{
+	color:#18B7FB;
+}
+html .featured-container--btn a{
+	background:#fff;
+	color:#123d80;
+	font-weight:700;
+}
+html .featured-container .new-issue img{
+	margin-bottom:20px;
+}
+
+/* UPDATE hub-pages.scss */
+
+html .list-of-book-series a{
+	color:#313131;
+}
+html .list-of-book-series a:hover{
+	color:#123d80;
+	text-decoration:underline;
+}
+
+html .pb-rich-text li>a, .pb-rich-text li>span>a{
+	font-weight:600;
+	text-decoration: underline;
+}
+
+
+
+
+/* UPDATE search-result.scss */
+html .profile-pages__heading.card, .search-result__refine-search .profile-pages__heading.refineSearch__content{
+	box-shadow:none;
+	border-bottom:1px solid #eaeaea;
+}
+
+html .search-result__nav__item.active{
+	background:#123d80;
+}
+html .search-result__body a{
+	color:#123d80;
+}
+html .search__item .accordion .accordion__control{
+	color:#123d80;
+}
+html .advancedSearch__tabs__nav li.js--active{
+	background:#123d80;
+}
+html .search-result__nav__item.active:after{
+	border-top-color:#123d80;
+}
+html .search-result .search__result .search-result__refine{
+	color:#313131;
+	border:1px solid #123d80;
+}
+html .search-result__meta__top .icon-section_arrow_d{
+	color:#313131;
+}
+html .search__item .item__body .meta__type{
+	color:#313131;
+}
+html .search-result .meta__info .meta__details a{
+	color:#313131;
+}
+html .search-result__body .meta__details{
+	font-size:14px;
+	font-size:0.875rem;
+}
+html .search__item .meta__epubDate span{
+	color:#313131;
+}
+html .search__sort.dropBlock .sort-by--label{
+	color:#123d80;
+}
+html .search__sort__drop{
+	border-color:#123d80;
+}
+
+/* UPDATE facet.scss */
+html .facet i[class*=icon-]{
+	color:#123d80;
+}
+
+/* UPDATE applied-facets.scss */
+html .facet__list--applied li{
+	background:#123d80;
+}
+
+html .facet__list--applied li.pinned-filter{
+	color:#313131;
+}
+html .search__sort__drop li{
+	color:#123d80;
+}
+
+
+
+/* UPDATE checkout.scss */
+html .billingBtn .search-results-page-body .payPallBtn, html .search-results-page-body .billingBtn .payPallBtn, html .search-results-page-body .btn, html .search-results-page-body [type=button], .search-results-page-body [type=submit], html .search-results-page-body button{
+	background: #123d80;
+}
+
+/* UPDATE table-of-contents.scss */
+html .table-of-content .issue-items-container [id^=heading-level-1]:before{
+	border-left: 4px solid #198c53;
+}
+
+/* UPDATE card.scss */
+html .card--light-shadow{
+	box-shadow:none;
+	border:1px solid #eaeaea;
+}
+
+/* UPDATE advanced-search.scss */
+html .advanced-search__top-section .tab__nav li.active a, html .advanced-search__top-section .tab__nav li.js--active a{
+	background: #123d80;
+	border: 1px solid #123d80;
+}
+
+/* UPDATE seamless-access.scss */
+html .recent-institution_icon:before{
+	color:#123d80;
+}
+
+/* UPDATE shibboleth.scss */
+html .inst-login-widget .accordion-tabbed__control{
+	color:#123d80;
+}
+
+
+
+/* UPDATE pagination.scss */
+html .pagination__list a.active{
+	background:#123d80;
+}
+
+/* UPDATE mrw-toc.scss */
+html #banner-text{
+	color:#123d80;
+}
+
+/* UPDATE build.css */
+html .login-widget .show-request-reset-password{
+	color:#123d80;
+}
+
+/* UPDATE profile-menu.scss */
+html .profile-menu{
+	background:#eaeaea;
+}
+html .profile-menu .active{
+	background:#f1f1f1;
+	font-weight:600;
+}
+
+/* UPDATE .manage-alerts.scss */
+html .eCommerceAccessEntitlementWidget .tab__nav li.active a, html .alerts .tab__nav li.active a{
+	background-color:#123d80;
+	border-bottom-color:#123d80;
+}
+
+
+/* UPDATE saved-searches.scss */
+html .saved-searches a, html .saved-searches a:active, html .saved-searches a:hover, html .saved-searches a:focus{
+	color:#123d80;
+}
+
+
+/**** General UI Cleanup ****/
+
+/* NEW // Clean up margin between widgets */
+html .journal-sidebar [data-widget-def='UX3HTMLWidget']{
+	margin-bottom:1.5rem;
+
+}
+
+/* UPDATE lists.scss // Clear floats of inline lists */
+html .rlist--inline:after{
+	content:" ";
+	display:table;
+	clear:both;
+}
+
+html .journal-sidebar .social-media{
+	min-height:48px;
+}
+
+/* UPDATE base.scss */
+html .more-widget-link{
+	font-size: 16px;
+	text-transform: none;
+	padding-bottom:10px;
+}
+
+/* UPDATE publication-content.scss */
+html .publication-cover-info{
+	margin-top: 5px;
+}
+
+/* UPDATE issue-item.scss */
+html .issue-item:first-child{
+	padding: 1.25rem 0 .625rem
+}
+html .issue-item__details.rlist--inline.listOfPublications li, html .issue-item__details.rlist--inline.separator li, html .navigation-login-dropdown>ul.issue-item__details.rlist--inline li{
+	border-color:#eaeaea;
+}
+html .issue-item{
+	border-bottom: 1px solid #eaeaea;
+}
+/* UPDATE content-item-format-links.scss */
+html .content-item-format-links .listOfPublications>li:not(:first-of-type), html .content-item-format-links .navigation-login-dropdown>ul>li:not(:first-of-type), html .content-item-format-links .separator>li:not(:first-of-type){
+	border-left:1px solid #eaeaea;
+}
+
+/* UPDATE general.scss */
+html .issue-item .item-category:not(:last-child){
+	border-right:1px solid #eaeaea;
+}
