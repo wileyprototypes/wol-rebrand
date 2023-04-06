@@ -1,0 +1,511 @@
+/****** INFO ******/
+/* 
+
+This stylesheet overrides most references to the global blue referenced by WOL's core sass files for the purpose of the Wiley team testing changes.  
+In reality, these reference one or two color variables in the precompiler. Any known references to the global blue outside of the sass files will be listed separatedly in polish-updates.css 
+
+Q: Why all the "html" selectors?
+A: This file was created as a POC to demonstrate style-only brand changes. It is loaded as a user stylesheet. The "html" selector adds enough specificity to overwrite the exact rule already in place on the core site, without forcing a complete override via "!important" (which would break otherwise higher-specificity styles in the cascade.)
+
+*/
+
+
+
+
+
+/*  ============ Update hub.css (in PB-assets)  ============ */
+html .rex-submit__text a.rex-submit__but{
+	background-color:#123d80;
+}
+html .DST-RR-Promo__editing h2, html .DST-RR-Promo__journal h2, html .DST-RR-Promo__submit h2, html .DST-RR-Promo__submit--blue, html .DST-RR-Promo__tools h2, html .DST-blue-header{
+    background-color:#123d80;
+}
+html .DST-SS .owl-carousel .owl-dots .owl-dot.active span{
+    background-color:#123d80;
+}
+
+html .DST-SS .owl-carousel .owl-dots .owl-dot span{
+	border:1px solid #123d80;
+}
+html .DST-SS .owl-nav [class*=owl-],.DST-SS .owl-nav [class*=owl-]:hover{
+	color:#123d80;	
+}
+
+html .new-accordion .accordion-tabbed__control{
+	background:#123d80;
+}
+html .hero{
+	background:#123d80;
+}
+
+
+
+
+/* ============ CORE sass files  ============ */
+
+
+
+/* UPDATE buttons.scss */
+html .billingBtn a.payPallBtn, html .billingBtn button.payPallBtn, .billingBtn input.payPallBtn, html .customBtn, html a.btn, html button.btn, html input.btn{
+	background:#123d80;
+}
+html .billingBtn a.payPallBtn:active, html .billingBtn a.payPallBtn:focus, html .billingBtn a.payPallBtn:hover, html .billingBtn button.payPallBtn:active, html .billingBtn button.payPallBtn:focus, html .billingBtn button.payPallBtn:hover, html .billingBtn input.payPallBtn:active, html .billingBtn input.payPallBtn:focus, html .billingBtn input.payPallBtn:hover, html .customBtn:active, html .customBtn:focus, html .customBtn:hover, html a.btn:active, html a.btn:focus, html a.btn:hover, html button.btn:active, html button.btn:focus, html button.btn:hover, html input.btn:active, html input.btn:focus, html input.btn:hover{
+	background:#123d80;
+}
+html .customBtn--inverse, html a.btn--inverse, html button.btn--inverse, html input.btn--inverse{
+	color:#123d80;
+	background:transparent;
+}
+
+html .billingBtn .homepage-search-wrapper .quick-search__button.payPallBtn, html .homepage-search-wrapper .billingBtn .quick-search__button.payPallBtn, html .homepage-search-wrapper .quick-search__button.btn{
+	background:#123d80;
+}
+
+/* TK: fix the hover styles */
+html .linkBtn, html  .linkBtn:active, .linkBtn:focus, .linkBtn:hover{
+	color:#123d80;
+}
+
+/* UPDATE inputs.scss */
+html .checkbox--primary input:checked~span:before, html .radio--primary input:checked~span:before, html .radio--secondary input:checked~span:before{
+	background:#123d80;
+	box-shadow:0 0 0 0.125rem #123d80;
+}
+html .checkbox--secondary span:after{
+	background-color:#123d80;
+}
+
+/* UPDATE: normalize.scss */
+html  a{
+	color:#123d80;	
+}
+
+
+/* UPDATE: mixins.scss */
+html .coolBar [class*=__block], html .coolBar__drop{
+	color: #123d80;
+}
+html .loginBar .profile-text, html .loginBar .sign-in-label{
+	color:#123d80;
+}
+html.popup.login-popup .show-request-reset-password, html .popup.login-popup .show-request-username{
+	background:#123d80;
+}
+html .read-less i[class*=icon-], html .read-more i[class*=icon-]{
+	color:#123d80;
+}
+html .toc__section .icon-toc{
+	color:#123d80;
+}
+html .advanced-search__top-section .tab__nav li.active a:after, html .advanced-search__top-section .tab__nav li.js--active a:after{
+	border-top:#123d80;
+}
+html .advanced-search [class*=-ctrl-field] i{
+	color:#123d80;
+}
+html a.search__follow__icon i{
+	color:#123d80;
+}
+
+html .listOfPublications a{
+	color:#123d80;
+}
+
+html .profile-menu a{
+	color:#123d80;
+}
+html .holdingsAccordion .accordion__control i, html .holdingsAccordion .accordion__control i{
+	color:#123d80;
+}
+html .infoBox i{
+	color:#123d80;
+}
+html .administratorsWidget .billingBtn .payPallBtn, html .administratorsWidget .btn, html .administratorsWidget button[type=submit], html .billingBtn .administratorsWidget .payPallBtn{
+	background:#123d80;
+}
+html .loi .parent-item{
+	color:#123d80;
+}
+html .news__title{
+	color:#123d80;
+}
+
+html .cartLabel .icon-shopping-cart{
+	color:#123d80;
+}
+
+html .popup.login-popup .show-request-reset-password, html .popup.login-popup .show-request-username{
+	color:#123d80;
+}
+html .read-less, html .read-more{
+	color:#123d80;
+}
+
+/* UPDATE: menu.scss */
+html .main-nav{
+	background-color: #123d80;
+}
+html .dropdown__menu{
+	border:2px solid #123d80;
+}
+html .dropdown__menu li:hover{
+	background-color:#123d80;
+	border-color:#123d80;
+}
+
+/* UPDATE: lists.scss */
+html .unordered-list-icons li a:hover{
+	color:#123d80;
+}
+/* UPDATE: tabs.scss */
+html .tabs--defult-style .tab__nav li.active{
+	background: #123d80;
+}
+html .tab__nav .active a i{
+	color: #123d80;
+}
+
+/* UPDATE: publication-content.scss */
+html .tab__content a, html .content-item-format-links a{
+	color: #123d80;
+}
+html .keywords li a:hover{
+	background:#123d80;
+}
+html section.article-section a{
+	color:#123d80;
+}
+html .article-section a{
+	color:#123d80;
+}
+html .keywords li a{
+	color:#123d80;
+}
+
+/* UPDATE: slideshow.scss */
+html .owl-carousel .owl-dots button.owl-dot.active span, html .owl-carousel .owl-dots button.owl-dot span:focus, html .owl-carousel .owl-dots button.owl-dot span:hover{
+	background-color: #123d80;
+}
+html .issue-item__title{
+	color: #123d80;
+}
+
+/* UPDATE cover-image.scss */
+html .cover-image--parentInfo .mostRecent .cover-image__parent-item{
+	color:#123d80;
+}
+
+/* UPDATE quick-search.scss */
+
+@media (min-width:1200px) {
+	html .expanded--quickSearch .quick-search .quick-search__button, html .quick-search.open .quick-search__button{
+		background-color: #123d80;
+	}
+	html .quick-search .search-options-wrapper a{
+		color: #123d80;
+		border-left: 1px solid #123d80;
+	}
+	html .quick-search .search-options-wrapper{
+		border: 1px solid #123d80;
+	}
+	html .quick-search .dropBlock, html .quick-search select{
+		background-color: #123d80;
+	}
+}
+
+html .quick-search.open .actualQSInput{
+	border-color: #123d80;
+}
+
+html .quickSearchAutocomplete.ui-autocomplete .single_highlight_class{
+	color:#123d80;
+}
+html .ms-res-ctn .ms-res-item em{
+	color:#123d80;
+}
+
+
+/* UPDATE citation.scss */
+html .citation a{
+	color:#123d80;
+}
+html article .author-name.js--open.author-name{
+	border-bottom:2px solid #123d80;
+}
+html article .author-name.js--open i, html article .author-name.js--open span{
+	color:#123d80;
+}
+
+/* UPDATE publication-content.scss */
+html a.bibLink:hover, html a.tab-link:hover{
+	background:#123d80;
+	color:#fff;
+}
+html .article-row-right .tab__nav .active a, html .article-row-right .tab__nav .js--active a{
+	color:#123d80;
+	border-bottom: 4px solid #123d80;
+}
+
+
+html .article-section .article-accordion>h2 .accordion__control, html .article-section .article-accordion h3 .accordion__control, html .article-section .article-accordion h4 .accordion__control, html .article-section .article-accordion h5 .accordion__control, html .article-section .article-accordion h6 .accordion__control{
+	background:#123d80;
+}
+.article-section .article-accordion>h2+.accordion__content, .article-section .article-accordion h3+.accordion__content, .article-section .article-accordion h4+.accordion__content, .article-section .article-accordion h5+.accordion__content, .article-section .article-accordion h6+.accordion__content{
+	border: 1px solid #123d80;
+	
+}
+
+
+/* UPDATE page-menu.scss */
+html .pages-nav .nav-icon-links .icon-alert, html .pages-nav .nav-icon-links .icon-icon-Rss, html .pages-nav .nav-icon-links .icon-Rss, html .pages-nav .social-links .icon-alert, html .pages-nav .social-links .icon-icon-Rss, html .pages-nav .social-links .icon-Rss{
+	color:#123d80;
+}
+html .pages-nav .share-access__ctrl, html .pages-nav .share__ctrl{
+	color:#123d80;
+}
+html .pages-nav .share-access__ctrl:hover, html .pages-nav .share__ctrl:hover{
+	color:#123d80;
+}
+
+
+/* UPDATE share.scss*/
+html .share__block{
+    border:2px solid #123d80;
+}
+html .share__block i[class*=icon-]{
+	color:#123d80;
+}
+html .share__block .w-slide--list li:hover{
+	background:#123d80;
+}
+
+
+
+/* UPDATE coolbar.scss*/
+html .coolBar [class*=__block] li:hover, html .coolBar__drop li:hover{
+	background:#123d80;
+}
+html .coolBar [class*=__ctrl].js--open{
+	border-bottom: 4px solid #123d80;
+	color:#123d80;
+}
+html .coolBar [class*=__block], html .coolBar__drop{
+	border: 2px solid #123d80;
+}
+html .coolBar [class*=__block] i, html .coolBar__drop i{
+	color:#123d80;
+}
+
+html .subjects-container .accordion-tabbed__content a:hover{
+	color:#123d80;
+}
+html .resources-container a:hover{
+	color:#123d80;
+}
+html .resources-container h3 a{
+	color:#123d80;
+}
+html .featured-container{
+	background: #123d80;
+}
+html .featured-container--btn a{
+	background:#fff;
+	color:#123d80;
+	font-weight:700;
+}
+
+/* UPDATE hub-pages.scss */
+html .list-of-book-series a:hover{
+	color:#123d80;
+	text-decoration:underline;
+}
+/* overwrite the blue link on subject pages */
+html .list-of-book-series a{
+	color:#123d80;
+}
+
+
+/* UPDATE search-result.scss */
+html .search-result__nav__item.active{
+	background:#123d80;
+}
+html .search-result__body a{
+	color:#123d80;
+}
+html .search__item .accordion .accordion__control{
+	color:#123d80;
+}
+html .advancedSearch__tabs__nav li.js--active{
+	background:#123d80;
+}
+html .search-result__nav__item.active:after{
+	border-top-color:#123d80;
+}
+html .search-result .search__result .search-result__refine{
+	border:1px solid #123d80;
+}
+html .search__sort.dropBlock .sort-by--label{
+	color:#123d80;
+}
+html .search__sort__drop{
+	border-color:#123d80;
+}
+
+/* UPDATE facet.scss */
+html .facet i[class*=icon-]{
+	color:#123d80;
+}
+
+/* UPDATE applied-facets.scss */
+html .facet__list--applied li{
+	background:#123d80;
+}
+html .search__sort__drop li{
+	color:#123d80;
+}
+
+/* UPDATE checkout.scss */
+html .billingBtn .search-results-page-body .payPallBtn, html .search-results-page-body .billingBtn .payPallBtn, html .search-results-page-body .btn, html .search-results-page-body [type=button], .search-results-page-body [type=submit], html .search-results-page-body button{
+	background: #123d80;
+}
+html .billingBtn .co-branding .payPallBtn, html .co-branding .billingBtn .payPallBtn, html .co-branding .btn{
+	background: #123d80;
+}
+
+
+/* UPDATE advanced-search.scss */
+html .advanced-search__top-section .tab__nav li.active a, html .advanced-search__top-section .tab__nav li.js--active a{
+	background: #123d80;
+	border: 1px solid #123d80;
+}
+
+/* UPDATE seamless-access.scss */
+html .recent-institution_icon:before{
+	color:#123d80;
+}
+
+/* UPDATE shibboleth.scss */
+html .inst-login-widget .accordion-tabbed__control{
+	color:#123d80;
+}
+
+
+
+/* UPDATE pagination.scss */
+html .pagination__list a.active{
+	background:#123d80;
+}
+
+/* UPDATE mrw-toc.scss */
+html #banner-text{
+	color:#123d80;
+}
+html .mrw-toc-accordion .accordion__control i{
+	color:#123d80;
+}
+
+/* UPDATE build.css */
+html .login-widget .show-request-reset-password{
+	color:#123d80;
+}
+
+
+/* UPDATE .manage-alerts.scss */
+html .eCommerceAccessEntitlementWidget .tab__nav li.active a, html .alerts .tab__nav li.active a{
+	background-color:#123d80;
+	border-bottom-color:#123d80;
+}
+html .eCommerceAccessEntitlementWidget .tab__nav li.active:after{
+	border-color: #123d80 transparent transparent;
+}
+html .articleSelect .tab__nav li.active a{
+	border-bottom-color:#123d80;
+	background:#123d80;
+}
+html .articleSelect .tab__nav li.active:after{
+	border-color:#123d80 transparent transparent
+}
+
+/* UPDATE saved-searches.scss */
+html .saved-searches a, html .saved-searches a:active, html .saved-searches a:hover, html .saved-searches a:focus{
+	color:#123d80;
+}
+html .saved-searches .delete-item:active, html .saved-searches .delete-item:focus, html .saved-searches .delete-item:hover{
+	color:#123d80;
+}
+
+/* UPDATE teaser.scss */
+html .creative-work a:hover{
+	color:#123d80;
+}
+
+/* UPDATE popover.scss */
+html .popover-toggle:active, html .popover-toggle:focus, html .popover-toggle:hover{
+	color:#123d80;
+}
+
+
+/* UPDATE search-history.scss*/
+html .billingBtn .search-history .search-historyLink.payPallBtn, html .search-history .billingBtn .search-historyLink.payPallBtn, html .search-history .btn.search-historyLink{
+	color:#123d80;
+}
+
+
+/* UPDATE accordion.scss*/ 
+html .accordion-tabbed__control:active, html .accordion-tabbed__control:focus, html .accordion-tabbed__control:hover{
+	color:#123d80;
+}
+
+/* UPDATE loi.scss*/
+html .loi__list a{
+	color:#123d80;
+}
+html .loi .date, .loi .parent-item{
+	color:#123d80;
+}
+
+
+
+/* UPDATE bulk-download.scss */
+html .bulk-download-modal .modal__footer a{
+	color:#123d80;
+}
+html .bulk-download-modal .modal__footer .export-citations__submit, html .bulk-download-modal .modal__footer .exportCitationsForm{
+	background:#123d80;
+}
+/* UPDATE .institutional-affiliations.scss */
+html .bulk-download{
+    border-bottom:1px solid #123d80;
+}
+
+/* Update access-denial.scss */
+html .seamlessAccessDenial__inner-wrapper{
+	background-color:#123d80;
+}
+html .accessDenial-btn a, .accessDenial-btn a:hover {
+	background-color:#123d80;
+}
+
+/* Update purchase.scss */
+html .add-journal-to-cart .unordered-list>li:before{
+	background-color:#123d80;
+}
+html .accessDenial-btn a{
+	background-color:#123d80;
+	border-color:#123d80;
+}
+
+/* update checkout.scss */ 
+html .checkout-expand .primary{
+	background-color:#123d80;
+}
+
+/* update icomoon style.scss */
+html .icon-shopping-cart:before{
+	color:#123d80;
+}
+
+/* update raa.scss */
+html .ssoLogin .link{
+	background:#123d80;
+}

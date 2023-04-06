@@ -1,0 +1,871 @@
+/****** INFO ******/
+/* 
+
+Q: Why all the "html" selectors?
+A: This file was created as a POC to demonstrate style-only brand changes. It is loaded as a user stylesheet. The "html" selector adds enough specificity to overwrite the exact rule already in place on the core site, without forcing a complete override via "!important" (which would break otherwise higher-specificity styles in the cascade.)
+
+	These selectors should NOT be included in the final edits of the existing CSS rules. 
+*/
+
+
+
+/****** Inline style tag in pb-assets/head-metadata.html  ******/
+
+/* All pages: admin message / notification bar*/
+html .admin-message{
+    background-color: #212121;
+}
+
+@media (min-width: 992px)
+{
+	html .admin-message{
+		padding:1rem 0;
+	}
+}
+
+/* Small heading style in use on subject pages */
+html .small-heading{
+	font-size:14px;
+}
+html .large-heading{
+	font-size:24px;
+}
+
+
+/* Topic heading on some MRWs like Comprehensive Physiology */
+html .topical-index h2{
+	font-family:'Open Sans', sans-serif;
+	font-weight:700;
+}
+
+/****** New style definitions  ******/
+
+/* Atypon admin icon */
+html .atypon-admin-bar-container .admin-bar-disclosure{
+	background:#032862;
+}
+
+/* Institutional Administration > Usage Reports: Fix the gray Atypon Insights button which fails WCAG and looks inactive*/
+html .report_delivery [type=submit]{
+	background:#123d80;
+}
+
+
+
+
+
+/****** Body text to #313131 ******/
+/* Update normalize.scss */
+html body{
+    color:#313131;
+}
+
+
+/****** Update article link color ******/
+html .article-section__full a:not(.getFTR__link--color){
+    color: #0056b3 !important;
+}
+
+
+/****** Undo light font weight override for serif headings ******/
+/* UPDATE: hub.css */
+/* Remove the rule setting to 400 font weight */
+html .serif{
+	font-weight:700 !important;
+}
+
+
+/****** Leaderboard Ad container: Remove the shadow and fix the padding of the page header  ******/
+
+/* UPDATE: healthcare-disclaimer.scss */
+html .pageHeader{
+	box-shadow:0 0 4px rgb(0 0 0 / 15%);
+	margin-bottom:0;
+	border-bottom:1px solid #d6d6d6;
+}
+
+html .banner-wrapper{
+    background:#fff;
+}
+
+/* UPDATE: header.scss */
+@media (min-width: 992px) html .pageHeader .contents{
+	padding:1rem 0;
+}
+
+
+
+/* UPDATE: mixins.scss */
+html label{
+    font-size: 14px;
+    font-size: 0.875rem;
+}
+html .journal-info-container h1{
+    font-size:1.625rem;
+    margin-bottom:1rem;
+}
+html .journal-info-container .info-block{
+	color:#313131;
+	font-size: 14px;
+}
+html .info-tab-wrapper .info-header{
+	font-weight:700;
+}
+/* Bold access icons */
+html .doi-access-wrapper{
+	font-weight:700;
+}
+
+html .coolBar i{
+	color:#313131;
+}
+
+html .coolBar [class*=__ctrl]{
+	color:#313131;
+}
+html .coolBar [class*=__ctrl].js--open i{
+	color:#123d80;
+}
+
+html .featured-container .new-issue h3{
+	font-weight:700;
+}
+html select{
+	background-color:#fff;
+	font-size: 14px;
+}
+html .search__sort__drop li:hover{
+	background:#eaeaea;
+}
+
+html .issue-item__title h1, html .issue-item__title h2, html .issue-item__title h3, html .issue-item__title h4, html .issue-item__title h5, html .issue-item__title h6 {
+	font-weight:700;
+}
+
+html label{
+	color:#000;
+}
+
+html .note{
+	color:#313131;
+}
+html .terms-message{
+	margin-bottom:1rem;
+}
+html .advanced-search [class*=-ctrl-field] i{
+	
+}
+
+
+html .article-section__inline-figure figcaption{
+	margin-top:1.75rem;
+}
+
+html .article-section__inline-figure figcaption .figure__caption-text{
+	font-size:14px;
+}
+
+
+/* Advanced search labels */
+html .facet__title--main{
+	font-weight:bold;
+}
+html .search-results-page-body .facet__title{
+	color:#313131;
+}
+
+
+html .author-info .author-name{
+    margin-bottom:1.25rem;
+	line-height:1.2;
+    display:block;
+    font-weight:700;
+}
+html .author-info p{
+    font-weight:500;
+}
+
+/* Homepage resource link headers */
+html .resources-container button a, html .resources-container h3 a{
+	font-weight:700;
+}
+
+
+
+/* New declaration */
+html .journal-info-container .info-block.book-header{
+    margin-bottom:1rem;
+}
+html .citation .moreInfoLink{
+    font-weight:700;
+    font-size:13px;
+    margin-top:10px;
+    display:block;
+}
+
+html .bulk-download-modal .modal__body .input-group label{
+	margin-bottom:0.75rem;
+}
+
+html .bulk-content__access-type .small{
+	font-weight:700;
+	margin-left:0.5rem;
+}
+
+html .article-row-right__panes .lot .creative-work__title{
+	text-decoration:none;
+}
+html .login-widget .show-request-reset-password, html .login-widget .show-request-username{
+	font-size:14px;
+	font-weight:600;
+}
+
+
+/* UPDATE: journal-meta.scss */
+html .journal-info-container .info-label, html .journal-info-container .info_label{
+	color:#313131;
+}
+html .journal-info-container .info-block.book-header .info_value .loa{
+    font-size:0.875rem;
+}
+
+
+/* UPDATE: menu.scss */
+html .dropdown.hover, html .dropdown.js--open, html .dropdown:focus, html .dropdown:hover{
+	background-color: rgba(255,255,255,0.1);
+}
+
+
+
+
+
+
+/****** Update global page headings to use Open Sans only (no source serif)  ******/
+
+/* UPDATE: headings.scss */
+html [class*=section__mainHeader]{
+	color:#313131;
+	font-family:'Open Sans', Arial, sans-serif;
+	font-weight:700;
+}
+html .account-page__header{
+	color:#313131;
+}
+
+
+
+/* UPDATE: publication-content.scss */
+html .content-item-format-links a{
+	font-weight: 700;
+}
+html .tabs__header, html h1, html h2, html h3, html h4, html h5, html h6{
+	font-weight:700;
+}
+
+html .extra-info-wrapper .page-range{
+	color:#313131;
+}
+html .article-row-right__panes .lot .creative-work__title a{
+	font-weight:600;
+}
+html .article-row-right .tab__nav i{
+	color:#333;
+}
+html .extra-info-wrapper .cover-label a{
+	text-decoration: none;
+}
+
+/* UPDATE: access.scss */
+/* Updates to access icons */
+html .doi-access-wrapper{
+	font-size:13px;
+}
+html .doi-access-wrapper .free-to-read-access, html .doi-access-wrapper .full-access, html .doi-access-wrapper .Token-access{
+	color:#008945;
+}
+html .doi-access-wrapper .open-access{
+	color:#B92D80;
+}
+html .doi-access-wrapper .free-access{
+	color:#d66310;
+}
+
+/* UPDATE: slideshow.scss */
+html .owl-carousel .owl-item a{
+	font-weight:700;
+}
+
+
+/* UPDATE issue-item.scss */
+html .issue-item__details{
+    color:#313131;
+}
+html .issue-item__details label{
+	color: #313131;
+}
+html .issue-item .ePubDate>:first-child, html .issue-item .page-range>:first-child{
+    color:#313131;
+}
+
+/* UPDATE cover-image.scss */
+html .cover-image__details label{
+	color: #313131;
+}
+html .issue-item h3.issue-item__title{
+	font-weight: 700;
+}
+html .cover-image__image img{
+	box-shadow: 0 0 0.15rem 0 rgba(0,0,0,0.2);
+}
+
+
+
+/* UPDATE citation.scss */
+html .epub-state{
+	color:#313131;
+}
+html article{
+	color:#000;
+}
+
+html .author-type.mb-1{
+    font-size:12px;
+    margin-bottom:0.25rem !important;
+}
+html .sm-account{
+    margin-bottom:1.5rem;
+}
+html .sm-account + .sm-account{
+    margin-top:-1rem;
+}
+html .sm-account__link i{
+    margin:0 0.55rem 0 0;
+}
+html .sm-account__link i.icon-orcid{
+    margin:0 0.5rem 0 0;
+}
+html .article-citation .desktop-authors .accordion-tabbed__tab-mobile i.icon-mail_outline, html .article-citation .mobile-authors .accordion-tabbed__tab-mobile i.icon-mail_outline{
+    margin: 0 0.25rem 0.1rem 0.5rem;
+}
+html .epub-sections{
+	color:#5a5a5a;
+}
+
+
+/* UPDATE publication-content.scss */
+
+html .article-citation .citation .loa-wrapper.loa-authors .accordion-tabbed{
+    color:#000000;
+}
+html .article-row-right .tab__nav a{
+	color: #333;
+}
+html article .accordion-tabbed__tab-mobile .author-info a[href^=mailto]{
+    font-weight:600;
+}
+
+/* UPDATE PB Assets: dr-overrides.css */
+html article .article__body h2, html article .article__content h2.article-section__title{
+	color: #000;
+	font-weight:700;
+	margin-top:24px;
+}
+html .article-row-right__panes .lot .creative-work .loa a{
+	color: #313131;
+}
+
+/* UPDATE footer.scss  - NB some of these styles are also inline in page builder for some reason*/
+html .main-footer{
+	background:#000;
+	color:rgba(255,255,255,0.8);
+}
+html .main-footer .col-md-12, html .main-footer .col-md-3{
+	padding-left:0;
+	padding-right:0;
+}
+html .copyright-container{
+	color:rgba(255,255,255,0.8);
+	margin-top:0;
+}
+html .copyright-container .container{
+	margin-top:1.75rem;
+	padding-top:1.75rem;
+	border-top:1px solid rgba(255,255,255,0.8);
+}
+
+html .footer-links a, html .footer-links button{
+	font-weight: 500;
+	font-size: 14px;
+	color:rgba(255,255,255,0.8);
+}
+html .footer-links a:hover, html .footer-links button:hover, html .footer-links a:focus, html .footer-links button:focus{
+	font-weight: 500;
+	font-size: 14px;
+	color:rgba(255,255,255,1);
+}
+
+html .footer-links h3{
+	font-weight:700;
+	text-transform:uppercase;
+	font-size: 14px;
+}
+
+
+/* UPDATE journal.scss */
+html .journal-body .section__mainHeader--mid{
+	margin:1.5rem 0;
+}
+html .journal-body .main-content div:first-child .section__mainHeader--mid{
+	margin:0.5 0 1.5rem 0;
+}
+
+html .journal-body .tab__content .tab__pane{
+    padding-top:1rem;
+}
+
+
+/* UPDATE share.scss*/
+
+html .addthis.addthis .at-resp-share-element .at-share-btn, html .addthis.addthis [class*=addthis_button], html .addthis.addthis a{
+    padding:15px 10px;
+}
+html .pages-nav .main-nav .addthis a{
+    font-size:14px;
+}
+html .pages-nav .main-nav .addthis li{
+    padding:0;
+}
+html .pages-nav .share--social-links .addthis{
+    line-height:1.5rem;
+}
+
+/* UPDATE share-access.scss*/
+html .share-access__link.share-access__link{
+	color:#115C36!important
+}
+html .share__block .share-access__link.share-access__link i{
+	color:#115C36;
+}
+html .share__block .share-access__link.share-access__link:hover i{
+	color:#fff;
+}
+html .share-access__link.share-access__link:hover{
+	background:#115C36;
+}
+
+
+/* UPDATE colors.scss */
+html .secondary-bg-color{
+	background:#f5f5f5;
+}
+
+/* UPDATE colors-variables.scss */
+html .commerce-back-heading{
+	color:#313131;
+}
+html .checkout-expand .primary{
+	text-transform:none;
+}
+
+/* UPDATE functions.scss */
+html select{
+	font-size:14px;
+	font-size:0.875rem;
+}
+
+
+
+/* UPDATE coolbar.scss*/
+
+/* UPDATE home.scss */
+html .homepage-search-headings .col-md-12{
+	margin-left:-55px;
+}
+html .homepage-search-headings .col-sm-4{
+	padding-left:0;
+	width:25%;
+}
+html .search-header-section .intro-text--search{
+	font-family:'Open Sans', Arial, sans-serif;
+	font-weight:800;
+}
+html .homepage-search-headings a{
+    font-weight:700;
+	font-size:18px;
+}
+
+
+html .subjects-container .accordion-tabbed__control{
+	background:#198C53;
+}
+html .subjects-container .accordion-tabbed__control:hover, html .subjects-container .accordion-tabbed__control:active, html .subjects-container .accordion-tabbed__control:focus{
+	color:#fff;
+}
+
+html .subjects-container .accordion-tabbed__tab.js--open .accordion-tabbed__control{
+	background:#313131;
+}
+html .subjects-container .accordion-tabbed__tab.js--open .accordion-tabbed__control:hover, html .subjects-container .accordion-tabbed__tab.js--open .accordion-tabbed__control:active, html .subjects-container .accordion-tabbed__tab.js--open .accordion-tabbed__control:focus{
+	color:#fff;
+}
+html .subjects-container .accordion-tabbed__content{
+	font-weight:normal;
+}
+html .subjects-container .accordion-tabbed__content a{
+	font-weight:600;
+}
+html .subjects-container .accordion-tabbed__content a:hover{
+	text-decoration:underline;
+}
+html .resources-container{
+	color:#313131;
+	font-size:16px;
+}
+
+/* This should simply be the removal of the current green rule rather than setting the blue again*/
+html .resources-container a{
+	color:#123d80;
+	font-weight:600
+}
+
+
+html .featured-container .section__mainHeader{
+	color:#18B7FB;
+}
+html .featured-container--btn a{
+	background:#fff;
+	font-weight:700;
+}
+html .featured-container .new-issue img{
+	margin-bottom:20px;
+}
+
+/* UPDATE hub-pages.scss */
+
+html .list-of-book-series a{
+	font-weight:600;
+}
+html .list-of-book-series a:hover{
+	text-decoration:underline;
+}
+
+html .pb-rich-text li>a, .pb-rich-text li>span>a{
+	font-weight:600;
+	text-decoration: underline;
+}
+
+
+
+/* UPDATE search-result.scss */
+html .profile-pages__heading.card, .search-result__refine-search .profile-pages__heading.refineSearch__content{
+	box-shadow:none;
+	border-bottom:1px solid #eaeaea;
+}
+
+html .search-result .search__result .search-result__refine{
+	color:#313131;
+}
+html .search-result__meta__top .icon-section_arrow_d{
+	color:#313131;
+}
+html .search__item .item__body .meta__type{
+	color:#313131;
+}
+html .search-result .meta__info .meta__details a{
+	color:#313131;
+}
+html .search__item .meta__authors a{
+    color:#313131;
+}
+html .search-result__body .meta__details{
+	font-size:14px;
+	font-size:0.875rem;
+}
+html .search__item .meta__epubDate span{
+	color:#313131;
+}
+
+html .search-result__body .meta__title{
+    font-weight:700;
+}
+
+
+
+/* UPDATE applied-facets.scss */
+html .facet__list--applied li.pinned-filter{
+	color:#313131;
+}
+
+
+
+/* UPDATE table-of-contents.scss */
+html .table-of-content .issue-items-container [id^=heading-level-1]:before{
+	border:none;
+}
+/* Even out bottom padding of "go to section" link on toc **/
+html .toc__section>a{
+    padding: 0.875rem 0 0.875rem 0;
+}
+
+
+/* Remove the weird green bar and the weird font styling */
+html .table-of-content .issue-items-container [id^=heading-level-1]{
+    font-weight:700;
+	font-size:24px;
+	font-size:1.6rem;
+}
+
+/* UPDATE card.scss */
+html .card--light-shadow{
+	box-shadow:none;
+	border:1px solid #eaeaea;
+}
+
+html .publications-page-body{
+    margin-top:3em;
+}
+
+
+/* UPDATE profile-menu.scss */
+html .profile-menu{
+	background:#eaeaea;
+}
+html .profile-menu .active{
+	background:#f1f1f1;
+	font-weight:600;
+}
+html .serif-headings h2,html .serif-headings h3,html .serif-headings h4,html .serif-headings h5,html .serif-headings h6{
+    font-family:"Open Sans", Arial, sans-serif;
+	font-weight:700;
+}
+html .serif-headings h2 strong,html .serif-headings h3 strong,html .serif-headings h4 strong,html .serif-headings h5 strong,html .serif-headings h6 strong{
+    font-weight:700;
+}
+
+html .serif-headings h1{
+    font-family:"Open Sans", Arial, sans-serif;
+    font-weight:800;
+}
+
+html .reset-type h1{
+    font-size:2.2em
+}
+html .reset-type h2{
+    font-size:1.8em
+}
+html .reset-type h3{
+    font-size:1.5em
+}
+html .reset-type h4{
+    font-size:1.25em
+}
+html .reset-type h5{
+    font-size:1em
+}
+html .reset-type h6{
+    font-size:0.9em
+}
+
+html .new-accordion .accordion-tabbed__control:hover, html .new-accordion .accordion-tabbed__tab.js--open .accordion-tabbed__control, html .new-accordion .accordion-tabbed__tab.js--open .accordion-tabbed__control:hover{
+	background-color:#313131;
+}
+/* TK: remove !important flag once py-4 class is taken off of PB basic custom pages */
+html .hero{
+	background:#123d80;
+    padding:3em 0 !important;
+}
+html .hero h1:after{
+	border-bottom:none;
+	width:0;
+}
+html .hero h1{
+	margin-bottom:inherit;
+}
+
+
+
+/* UPDATE bulk-download.scss */
+
+
+html .bulk-content__access-type.free-to-read-access, html .bulk-content__access-type.full-access, html .bulk-content__access-type.token-access{
+	color:#008945;
+}
+html .bulk-content__access-type.open-access{
+	color:#B92D80;
+}
+html .bulk-content__access-type.free-access{
+	color:#d66310;
+}
+html .bulk-download-modal .modal__body .input-group.bulkDownloadCheckbox .label-txt:before{
+	margin-top:0.35rem;
+}
+
+
+
+/**** General UI Cleanup ****/
+
+/* NEW // Clean up margin between widgets */
+html .journal-sidebar [data-widget-def='UX3HTMLWidget']{
+	margin-bottom:1.5rem;
+
+}
+
+/* UPDATE lists.scss // Clear floats of inline lists */
+html .rlist--inline:not('.pagination__list'):after{
+	content:" ";
+	display:table;
+	clear:both;
+}
+
+html .journal-sidebar .social-media{
+	min-height:48px;
+}
+
+/* UPDATE base.scss */
+html .more-widget-link{
+	font-size: 16px;
+	text-transform: none;
+	padding-bottom:10px;
+}
+
+/* UPDATE publication-content.scss */
+html .publication-cover-info{
+	margin-top: 5px;
+}
+html .icon-Icon_Download{
+    padding-right:10px;
+}
+html .article-row-right__panes .lot .creative-work .parent-item a, html .article-row-right__panes .lot .creative-work .parent-item span:first-child{
+    font-weight:700;
+}
+html article .abstract-group .article-section__header, html article .article-section__abstract .article-section__header{
+    font-weight:600;
+    color:#313131;
+}
+html .figure-extra a{
+	font-weight:700;
+}
+
+html article .article-section__table td{
+	font-size:14px;
+}
+/* UPDATE issue-item.scss */
+
+html .issue-item__details.rlist--inline.listOfPublications li, html .issue-item__details.rlist--inline.separator li, html .navigation-login-dropdown>ul.issue-item__details.rlist--inline li{
+	border-color:#eaeaea;
+}
+html .issue-item{
+	border-bottom: 1px solid #eaeaea;
+}
+html .issue-item .loa a{
+    color:#313131;
+}
+
+/* UPDATE content-item-format-links.scss */
+html .content-item-format-links .listOfPublications>li:not(:first-of-type), html .content-item-format-links .navigation-login-dropdown>ul>li:not(:first-of-type), html .content-item-format-links .separator>li:not(:first-of-type){
+	border-left:1px solid #d6d6d6;
+}
+
+/* UPDATE general.scss */
+html .issue-item .item-category:not(:last-child){
+	border-right:1px solid #d6d6d6;
+}
+
+
+/* UPDATE buttons.scss */
+/* Align button font size with global Wiley styles */
+html .billingBtn a.payPallBtn, html .billingBtn button.payPallBtn, html .billingBtn input.payPallBtn, html .customBtn, html a.btn, html button.btn, html input.btn{
+	font-size:0.875rem;
+}
+html button.btn#custom-date-form-btn{
+	font-size:0.75rem;
+}
+
+
+/* UPDATE reset-password.scss */
+/* Align eye icon with new font size*/
+html .password-eye-icon{
+	top:3rem;
+}
+
+/* Update base.scss */
+html .pb-rich-text p{
+    margin-bottom:1rem;
+}
+html a.visitable:visited{
+	color:#941e66;
+}
+
+/* Update headings.scss */
+html h3, html .h3{
+    font-size:1.4rem;
+}
+/* TOC section header */
+.section__header{
+    color:#313131;
+}
+
+
+/* Update issue-item.scss */
+/*
+html .issue-item:first-child{
+	padding: 1.25rem 1.25rem .625rem
+}*/
+
+
+/* update checkout.scss */ 
+html .checkout-expand .primary{
+	text-transform:none;
+	font-size:1rem;
+}
+
+/* update publication-versions.scss */ 
+html .citation .corrections-body h6, html .citation .version-body h6, html .publication-version-container .corrections-body h6, html .publication-version-container .version-body h6, html .table-of-content .corrections-body h6, html .table-of-content .version-body h6{
+	font-weight:700;
+	font-size:1rem;
+}
+
+html .citation .corrections-body .parent-item, html .citation .version-body .parent-item, html .publication-version-container .corrections-body .parent-item, html .publication-version-container .version-body .parent-item, html .table-of-content .corrections-body .parent-item, html .table-of-content .version-body .parent-item{
+	color:#313131;
+	font-size:0.875rem;
+}
+html .citation .corrections-body .loa-authors-trunc a, html .citation .version-body .loa-authors-trunc a, html  .publication-version-container .corrections-body .loa-authors-trunc a, html .publication-version-container .version-body .loa-authors-trunc a, html .table-of-content .corrections-body .loa-authors-trunc a, html .table-of-content .version-body .loa-authors-trunc a{
+	color:#5a5a5a;
+}
+
+
+/* updte kbart-api-tokes.scss or move somewhere else */
+/* Fix padding on article navigator message inside of tabs on journal homepage */
+html .tab__content .multi-search__message {
+    color:#333;
+    display:block;
+    margin:0.5rem 0 1.5rem;
+}
+
+
+
+/* update loi.scss */
+html .loi--aside__left>.loi__list{
+    font-size:14px;
+    font-size:0.875rem;
+}
+
+/* update show-recommended.scss */
+html .show-recommended__title{
+	padding:1.25rem 1.25rem 0 1.25rem;
+	font-size:1rem;
+}
+
+/** UPDATE accordion.scss **/
+/* WOL homepage accordion outline */
+html .subjects-container .accordion-tabbed__content{
+	border:1px solid #313131;
+}
+
+
+
+/** UPDATE search-facets.scss **/
+/* Only needed due to local css specificity - shouldn't be needed to integrate styles */
+html .facet__list--applied li i[class*=icon-]{
+	color:#fff;
+}
