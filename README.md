@@ -18,3 +18,5 @@ document.head.appendChild(script);
 @import url(https://wileyprototypes.github.io/wol-rebrand/blue-updates.css);
 @import url(https://wileyprototypes.github.io/wol-rebrand/polish-updates.css);
 ```
+7. Save and close the Add-on tab. 
+8. Back on Wiley Online Library, click the add-on button and ensure that your new rule is toggled on. Then, refresh the page you are looking at.
