@@ -1,7 +1,7 @@
 # WOL Rebrand - Live POC styles
 This project contains test CSS files and JavaScript that, when applied to the live version of Wiley Online Library, demonstrate how the upcoming brand updates will look.
 
-##Installation instructions##
+## Installation instructions
 1. Download the [User Javascript and CSS Chrome Add-on](https://chrome.google.com/webstore/detail/user-javascript-and-css/nbhcbdghjpllgmfilhnhkllmkecfmpld?hl=en)
 2. Navigate to a page on Wiley Online Library
 3. Click the Add-on's button and then "+ Add new"
